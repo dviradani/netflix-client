@@ -57,7 +57,7 @@ const BrowsePage = ({ type }) => {
         <div className="sliders-container">
           <Slider
             contentList={userList}
-            title={`${userInfo.username}` + "`s List"}
+            title={userInfo && `${userInfo.username}` + "`s List"}
           />
           <Slider
             contentList={async () => await getList("")}
