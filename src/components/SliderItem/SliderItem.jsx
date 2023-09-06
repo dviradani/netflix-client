@@ -78,7 +78,7 @@ const SliderItem = ({ content, title }) => {
                       {!isPlaying ? "play_circle" : "stop_circle"}
                     </span>
                   </div>
-                  {userList.find((c) => c._id === content._id) ? (
+                  {userList && userList.find((c) => c._id === content._id) ? (
                     <div className="icon-container">
                       <span
                         className="material-symbols-outlined btn-icon"
