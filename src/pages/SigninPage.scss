@@ -1,0 +1,86 @@
+@import "../App.scss";
+
+.signin-card{
+    background-color: rgba(0,0,0,.75);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 3rem;
+    width: 30rem;
+    height: 35rem;
+
+    @include tablet {
+        width: 25rem;
+    }
+
+    @include mobile {
+        width: 22rem;
+    }
+    
+    h1{
+        font-size: 32px;
+        font-weight: 500;
+        margin-bottom: 2rem;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        gap: 2rem;
+    
+        input {
+            width: 100%;
+            border: 1px solid white;
+            background: rgb(26, 25, 25);
+            opacity: 75%;
+            font-size: 1.25rem;
+            padding: 15px;
+            color: white;
+    
+            &::placeholder{
+                color: whitesmoke;
+            }
+            &:focus{
+                outline: 2px solid white;
+            }
+        }
+
+        button{
+            // height: 50px;
+            width: 100%;
+            margin-right: 0.8rem;
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+    }
+    .signin-card-footer{
+               
+        .redirect-signup-p{
+            font-size:large;
+            font-weight: 200;
+            margin: 15px;
+            color: darken($color: white, $amount: 20%);
+            a {
+                color: white;
+                font-weight: bold;
+                text-decoration: none;
+              }
+              a:hover {
+                text-decoration:underline;
+              }
+        }
+
+        .captcha-p{
+            font-size:medium;
+            font-weight: 100;
+            margin: 15px;
+
+        }
+    }
+}
+

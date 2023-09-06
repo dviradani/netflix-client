@@ -1,0 +1,181 @@
+@import "../../App.scss";
+
+.my-navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2%;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.7) 10%,
+    transparent
+  );
+  color: white;
+  position: fixed;
+  top: 0;
+  transition: background-color 0.35s ease-in-out;
+  z-index: 999;
+
+  &.scrolled {
+    background-color: #121212;
+
+    .userDropdown,
+    .contentDropdown {
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
+      }
+
+      background-color: #121212 !important;
+    }
+  }
+
+  a {
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+
+    &:hover {
+      color: darken($color: #fff, $amount: 15%);
+    }
+    &.active {
+      font-weight: 800;
+    }
+  }
+
+  .my-icon {
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .my-left-side-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: 100vw;
+
+    @include mobile {
+      gap: 0.5rem;
+    }
+
+    .left-side-logo-container {
+      img {
+        width: 10rem;
+        @include mobile {
+          width: 6rem;
+          margin-left: 3px;
+        }
+      }
+
+      transition: scale 0.3 ease-in-out;
+      & :hover {
+        scale: (1.1);
+      }
+    }
+
+    .left-side-links-container {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+
+      @include mobile {
+        gap: 0;
+      }
+
+      .my-link-container {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .mobileContentMenu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .contentDropdown {
+          background-color: rgb(18, 18, 18, 0.65);
+          position: fixed;
+          top: 4.5rem;
+          left: 25%;
+          background-color: rgb(18, 18, 18, 0.65);
+          transition: background-color 0.35s ease-in-out;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 1rem;
+
+          @include mobile {
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .my-right-side-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 0.5rem;
+    width: 80%;
+    height: 5rem;
+
+    .my-account-container {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      .face-icon {
+        cursor: default;
+      }
+
+      .userDropdown {
+        position: fixed;
+        top: 4.5rem;
+        width: fit-content;
+        right: 0;
+        background-color: rgb(18, 18, 18, 0.65);
+        transition: background-color 0.35s ease-in-out;
+        padding: 1rem;
+        font-size: large;
+        a {
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          padding: 1rem;
+        }
+      }
+    }
+  }
+
+  @include tablet {
+    .my-right-side-container {
+      justify-content: start;
+      width: max-content;
+    }
+  }
+
+  @include mobile {
+    .my-icon {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.my-arrow-icon-span {
+  transition: transform 0.3s;
+  font-size: 1.5rem;
+
+  &:hover {
+    transform: rotate(0.5turn);
+  }
+}

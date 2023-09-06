@@ -1,0 +1,43 @@
+@import "../../App.scss";
+
+
+.my-search-container{
+    display: flex;
+    align-items:center;
+    justify-content:flex-end ;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    padding-bottom: 0.25rem;
+    transition: border 0.5s ease;
+    border: none;
+
+    &.shown{
+
+        transition: width 0.5s ease;
+        border: rgb(200, 200, 200) solid 2px;
+        border-radius: 12px;
+        width: 70%;  
+    }
+
+    .my-icon{
+        font-size: 2.5rem;
+        cursor: pointer;
+        padding-right: 1rem;
+    }
+
+    .my-search-input{
+        background-color: transparent;
+        color: white;
+        outline: none;
+        font-size:18px;
+        text-indent: 0.75rem;
+        transition: width 0.3s ease;
+        width: 0%;
+        gap:0.25rem;
+
+        &.shown{
+            transition: width 0.3s ease;
+            width: 100%;  
+        }
+    }
+}
