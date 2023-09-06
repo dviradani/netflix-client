@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { GetURLSearchFilter } from "../../Services/GetURLSearchFilter";
+import { GetURLSearchFilter } from "../../services/GetURLSearchFilter";
 
 import "./Searchbox.scss";
 
