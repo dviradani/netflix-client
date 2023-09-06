@@ -44,7 +44,7 @@ const Header = () => {
           <div className="my-left-side-container">
             <div className="left-side-logo-container">
               <NavLink to="/">
-                <img src="\src\assets\netflix_logo.png" alt="Netflix" />
+                <img src="netflix_logo.png" alt="Netflix" />
               </NavLink>
             </div>
             <div className="left-side-links-container">

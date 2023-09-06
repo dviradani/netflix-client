@@ -55,11 +55,7 @@ const SignupPage = () => {
       <div className="signup-container">
         <div className="signup-header">
           <div className="signup-img-container">
-            <img
-              src="\src\assets\netflix_logo.png"
-              alt="Netflix"
-              className="logo-img"
-            />
+            <img src="netflix_logo.png" alt="Netflix" className="logo-img" />
           </div>
         </div>
         <main>
