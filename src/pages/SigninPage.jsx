@@ -60,6 +60,10 @@ const SigninPage = () => {
                 placeholder="Password"
                 required
               />
+              <p style={{ fontSize: "13px" }}>
+                *For testing purposes:
+                <br /> Email: admin@example.com / password: 12345
+              </p>
               <button onClick={submitHandler}>Sign In</button>
             </form>
             <div className="signin-card-footer">
